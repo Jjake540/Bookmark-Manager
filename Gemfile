@@ -8,6 +8,7 @@ source 'https://rubygems.org'
 
 gem 'capybara'
 gem 'rspec'
+gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
 

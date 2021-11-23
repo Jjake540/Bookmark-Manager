@@ -1,0 +1,41 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/jake/Projects/Bookmark-Manager/app.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/jake/Projects/Bookmark-Manager/spec/features/viewing_bookmarks_spec.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1637669552
+  }
+}

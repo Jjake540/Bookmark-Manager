@@ -1,5 +1,15 @@
 # frozen_string_literal: true
 
+require_relative './setup_test_database'
+
+ENV['ENVIROMENT'] = 'test'
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+
 require 'simplecov'
 require 'simplecov-console'
 

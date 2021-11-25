@@ -2,9 +2,7 @@
 
 require 'pg'
 
-p 'Setting up database...'
-
-def setup_test_database
+def persisted_data(id:)
   connection = PG.connect(dbname: 'bookmark_manager_test')
-  connection.exec("TRUNCATE bookmarks;")  
+  connection.query("SELECT * FROM bookmarks WHERE id = '#{id}';")
 end

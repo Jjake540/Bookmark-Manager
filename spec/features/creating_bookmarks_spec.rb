@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 feature 'Adding a new bookmark' do
-  scenario 'The user can add a bookmark to the web app' do
+  scenario 'A user can add a bookmark to Bookmark Manager' do
     visit('/bookmarks/new')
-    fill_in('url', with: 'http://www.test.com')
+    fill_in('url', with: 'http://www.testbookmark.com')
+    fill_in('title', with: 'Test Bookmark')
     click_button('Submit')
 
-    expect(page).to have_content 'http://www.test.com'
+    expect(page).to have_link('Test Bookmark', href: 'http://www.testbookmark.com')
   end
 end
-

@@ -6,11 +6,9 @@ require 'database_helpers'
 describe Bookmark do
   describe '.all' do
     it 'returns a list of bookmarks' do
-
-      # Add the test data
-      bookmark = Bookmark.create(url: "http://www.makersacademy.com", title: "Makers Academy")
-      Bookmark.create(url: "http://www.destroyallsoftware.com", title: "Destroy All Software")
-      Bookmark.create(url: "http://www.google.com", title: "Google")
+      bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
+      Bookmark.create(url: 'http://www.destroyallsoftware.com', title: 'Destroy All Software')
+      Bookmark.create(url: 'http://www.google.com', title: 'Google')
 
       bookmarks = Bookmark.all
 
@@ -41,6 +39,31 @@ describe Bookmark do
       Bookmark.delete(id: bookmark.id)
 
       expect(Bookmark.all.length).to eq 0
+    end
+  end
+
+  describe '.update' do
+    it 'updates the selected bookmark' do
+      bookmark = Bookmark.create(title: 'BBC', url: 'http://www.bbc.co.uk')
+      updated_bookmark = Bookmark.update(id: bookmark.id, title: 'Test', url: 'http://www.example.com')
+
+      expect(updated_bookmark).to be_a Bookmark
+      expect(updated_bookmark.id).to eq bookmark.id
+      expect(updated_bookmark.title).to eq 'Test'
+      expect(updated_bookmark.url).to eq 'http://www.example.com'
+    end
+  end
+
+  describe '.find' do
+    it 'returns the requested bookmark object' do
+      bookmark = Bookmark.create(title: 'BBC', url: 'http://www.bbc.co.uk')
+
+      result = Bookmark.find(id: bookmark.id)
+
+      expect(result).to be_a Bookmark
+      expect(result.id).to eq bookmark.id
+      expect(result.title).to eq 'BBC'
+      expect(result.url).to eq 'http://www.bbc.co.uk'
     end
   end
 end

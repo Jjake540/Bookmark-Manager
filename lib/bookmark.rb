@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'pg'
+require_relative 'database_connection'
 
 # Bookmark main class
 class Bookmark

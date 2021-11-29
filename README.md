@@ -38,6 +38,10 @@ I want to update a bookmark
 As a user
 I want the bookmarks to work
 I want to only be able to save a valid URL
+
+As a user
+So that I can make notes
+I want to add a Comment to a Bookmark
 ```
 
 ## Domain Model

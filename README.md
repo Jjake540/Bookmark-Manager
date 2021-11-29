@@ -42,6 +42,10 @@ I want to only be able to save a valid URL
 As a user
 So that I can make notes
 I want to add a Comment to a Bookmark
+
+As a user
+So that I can find relevant bookmarks
+I want to filter Bookmarks by a Tag
 ```
 
 ## Domain Model

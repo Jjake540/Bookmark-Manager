@@ -2,9 +2,9 @@
 
 feature 'delete a bookmark' do
   scenario 'user deletes a bookmark' do
-    Bookmark.create(url: 'https//www.test.com', title: 'Test')
+    Bookmark.create(url: 'https://www.test.com', title: 'Test')
     visit('/bookmarks')
-    expect(page).to have_link('Test', href: 'https//www.test.com')
+    expect(page).to have_link('Test', href: 'https://www.test.com')
 
     first('.bookmark').click_button 'Delete'
 

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'pg'
 require_relative 'database_connection'
 require 'uri'
 

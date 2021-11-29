@@ -3,7 +3,6 @@
 require 'bookmark'
 require 'database_helpers'
 
-describe Bookmark do
   describe '.all' do
     it 'returns a list of bookmarks' do
       bookmark = Bookmark.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
@@ -72,4 +71,3 @@ describe Bookmark do
       expect(result.url).to eq 'http://www.bbc.co.uk'
     end
   end
-end

@@ -34,6 +34,10 @@ I want to delete a bookmark
 As a user
 So I can update a bookmark from Bookmark Manager
 I want to update a bookmark
+
+As a user
+I want the bookmarks to work
+I want to only be able to save a valid URL
 ```
 
 ## Domain Model
